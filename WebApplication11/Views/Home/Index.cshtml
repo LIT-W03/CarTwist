@@ -1,0 +1,39 @@
+﻿@using CarTwist.Data
+@using WebApplication11.Models
+@model HomePageViewModel
+
+<a href="/home/showaddform" class="btn btn-primary">Add Car</a>
+<table class="table table-hover table-striped table-bordered">
+    <tr>
+        <th>Make</th>
+        <th>Model</th>
+        <th>Year</th>
+        <th>Price</th>
+        <th>Car Type</th>
+        <th>Leather Seats</th>
+    </tr>
+
+    @foreach (Car car in Model.Cars)
+    {
+        <tr>
+            <td>@car.Make</td>
+            <td>@car.Model</td>
+            <td>@car.Year</td>
+            <td>@car.Price</td>
+            <td>@car.CarType</td>
+            <td>
+                @if (car.HasLeatherSeats)
+                {
+                    <span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>
+
+                }
+                else
+                {
+                    <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+                }
+            </td>
+
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,35 @@
+﻿
+<div class="row">
+    <div class="col-md-6 col-md-offset-3 well">
+        <form method="post" action="/home/addcar">
+            <input type="text" class="form-control" placeholder="Make" name="make" />
+            <br />
+            <input type="text" class="form-control" placeholder="Model" name="model" />
+            <br />
+            <input type="text" class="form-control" placeholder="Year" name="year" />
+            <br />
+            <input type="text" class="form-control" placeholder="Price" name="price" />
+            <br />
+
+            <select class="form-control" name="carType" id="car-type">
+                <option>-- Choose Car Type --</option>
+                <option value="0">Sedan</option>
+                <option value="1">SUV</option>
+                <option value="2">Supercar</option>
+            </select>
+            
+            <input type="hidden" name="hasleatherseats" value="true"/>
+            <select class="form-control" name="hasleatherseats" id="has-leather">
+                <option value="true">True</option>
+                <option value="false">False</option>
+            </select>
+
+            <button class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+
+@section scripts
+{
+    <script src="/Content/newcar.js"></script>
+}

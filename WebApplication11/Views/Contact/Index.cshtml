@@ -1,0 +1,24 @@
+﻿@model WebApplication11.Models.ContactViewModel
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3 well">
+
+        <form method="POST" action="/contact/post">
+            <input type="text" value="@Model.Name" name='name' placeholder="Name" class="form-control" />
+            <br />
+            <input type="text" value="@Model.Email" name='email' placeholder="Email" class="form-control" />
+            <br />
+            <input type="text" name='phone' placeholder="Phone Number" class="form-control" />
+            <br />
+            <textarea rows="10" name="message" class="form-control"></textarea>
+            <br />
+            <span>Sign up for newsletter?</span>
+            <input type="checkbox" name="wantsnewsletter" value="true"/>
+            <input type="hidden" name="wantsnewsletter" value="false"/>
+            <br />
+            <br />
+            <button class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+</div>
